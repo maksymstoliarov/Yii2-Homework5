@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\StudentsHomeworkSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Students Homeworks';
+$this->title = Yii::t('app', 'Students Homeworks');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="students-homework-index">

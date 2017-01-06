@@ -37,7 +37,7 @@ GreyAsset::register($this);
 <div id="container">
     <table id="header">
         <tr>
-            <td id="logo"><span class='wsite-logo'><a href='/'><span id="wsite-title"><?php echo Html::encode(\Yii::$app->name); ?></span></a></span></td>
+            <td id="logo"><span class='wsite-logo'><a href='/'><span id="wsite-title"><?php echo Yii::t('app', Yii::$app->name); ?></span></a></span></td>
             <td id="header-right">
                 <table>
                     <tr>

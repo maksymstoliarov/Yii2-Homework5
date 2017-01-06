@@ -9,7 +9,7 @@ use common\widgets\MultiLang\MultiLang;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 
-$this->title = 'Homeworks';
+$this->title = Yii::t('app', 'Homeworks');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="homework-index">

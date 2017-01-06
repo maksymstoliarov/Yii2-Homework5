@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            Yii::t('app', 'department_name'),
+            Yii::t('app', 'department_name')
 
         ],
     ]); ?>

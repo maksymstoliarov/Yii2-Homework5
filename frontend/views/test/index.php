@@ -10,7 +10,7 @@
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 
-$this->title = 'Test Application';
+$this->title = Yii::t('app', 'Test Application');
 
 echo Html::beginTag('table', ['border' => 2]);
 ?>
@@ -24,9 +24,9 @@ foreach ($data as $test) {
         echo Html::endTag('td');
     }
     ?>
-    <td><?= Html::a('View', ['view', 'id' => $test->id], ['class' => 'btn btn-primary']); ?></td>
-    <td><?= Html::a('Update', ['update', 'id' => $test->id], ['class' => 'btn btn-primary']); ?></td>
-    <td><?= Html::a('Delete', ['delete', 'id' => $test->id], [
+    <td><?= Html::a(Yii::t('app', 'View'), ['view', 'id' => $test->id], ['class' => 'btn btn-primary']); ?></td>
+    <td><?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $test->id], ['class' => 'btn btn-primary']); ?></td>
+    <td><?= Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $test->id], [
     'class' => 'btn btn-danger',
     'data' => [
         'confirm' => 'Are you sure you want to delete this item?',
