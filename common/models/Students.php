@@ -3,6 +3,7 @@
 namespace common\models;
 
 use yii\db\ActiveRecord;
+use Yii;
 
 /**
  * This is the model class for table "students".
@@ -45,8 +46,8 @@ class Students extends ActiveRecord
     {
         return [
             'id' => 'ID',
-            'student_name' => 'Student Name',
-            'department_id' => 'Department ID',
+            'student_name' => Yii::t('app', 'Student Name'),
+            'department_id' => Yii::t('app', 'Department ID'),
         ];
     }
 

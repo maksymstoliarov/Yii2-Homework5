@@ -3,6 +3,7 @@
 namespace common\models;
 
 use yii\db\ActiveRecord;
+use Yii;
 
 /**
  * This is the model class for table "students_homework".
@@ -42,8 +43,8 @@ class StudentsHomework extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'students_id' => 'Students ID',
-            'homework_id' => 'Homework ID',
+            'students_id' => Yii::t('app', 'Students ID'),
+            'homework_id' => Yii::t('app', 'Homework ID'),
         ];
     }
 

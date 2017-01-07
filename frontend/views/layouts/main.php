@@ -67,6 +67,7 @@ GreyAsset::register($this);
             Yii::$app->user->isGuest ?
                 ['label' => Yii::t('app', 'Login'), 'url' => ['/site/login']] :
                 ['label' => Yii::t('app', 'Logout').'('.Yii::$app->user->identity->username.')', 'url' => ['/site/logout']],
+                ['label' => Yii::t('app', 'Signup'), 'url' => ['/site/signup']],
         ],
     ]);
 

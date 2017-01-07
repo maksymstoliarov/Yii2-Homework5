@@ -3,6 +3,7 @@
 namespace common\models;
 
 use yii\db\ActiveRecord;
+use Yii;
 
 /**
  * This is the model class for table "homework".
@@ -45,8 +46,8 @@ class Homework extends ActiveRecord
     {
         return [
             'id' => 'ID',
-            'homework_name' => 'Homework Name',
-            'thema_id' => 'Thema ID',
+            'homework_name' => Yii::t('app', 'Homework Name'),
+            'thema_id' => Yii::t('app', 'Thema ID'),
         ];
     }
 

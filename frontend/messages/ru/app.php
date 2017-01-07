@@ -20,7 +20,7 @@ return [
     'Test Application' => 'Тестовое Приложение',
     'Home' => 'Домашняя',
     'About' => 'О нас',
-    'Contact' => 'Контанты',
+    'Contact' => 'Контакты',
     'Logout' => 'Выйти',
     'Login' => 'Войти',
     'My Company' => 'Моя компания',
@@ -43,5 +43,28 @@ return [
     'View' => 'Просмотреть',
     'Update' => 'Изменить',
     'Delete' => 'Удалить',
-    'Welcome' => 'Добро Пожаловать'
+    'Welcome' => 'Добро Пожаловать',
+    'Username' => 'Логин',
+    'Password' => 'Пароль',
+    'Remember Me' => 'Запомнить Меня',
+    'Please fill out the following fields to login:' =>
+        'Пожалуйста, заполните следующие поля для входа:',
+    'If you forgot your password you can' =>
+        'Если вы забыли свой пароль Вы можете',
+    'reset it' => 'очистить его',
+    'Incorrect username or password.' =>
+        'Неверное имя пользователя или пароль.',
+    'Get started with Yii' => 'Начать работу с Yii',
+    'Yii Documentation' => 'Yii Документация',
+    'Yii Forum' => 'Yii Форум',
+    'Heading' => 'Заголовок',
+    'Yii Extensions' => 'Yii Расширения',
+    'Please fill out the following fields to signup:' =>
+        'Пожалуйста, заполните следующие поля, чтобы зарегистрироваться:',
+    'Signup' => 'Регистрация',
+    'Department ID' => 'Номер Кафедры',
+    'Homework Name' => 'Название Домашки',
+    'Thema ID' => 'Номер Темы',
+    'Thema Name' => 'Название Темы',
+
 ];

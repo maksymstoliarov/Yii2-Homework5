@@ -3,6 +3,7 @@
 namespace common\models;
 
 use yii\db\ActiveRecord;
+use Yii;
 
 /**
  * This is the model class for table "department".
@@ -40,7 +41,7 @@ class Department extends ActiveRecord
     {
         return [
             'id' => 'ID',
-            'department_name' => 'Department Name',
+            'department_name' => Yii::t('app', 'Department Name'),
         ];
     }
 

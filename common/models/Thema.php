@@ -3,6 +3,7 @@
 namespace common\models;
 
 use yii\db\ActiveRecord;
+use Yii;
 
 /**
  * This is the model class for table "thema".
@@ -40,7 +41,7 @@ class Thema extends ActiveRecord
     {
         return [
             'id' => 'ID',
-            'thema_name' => 'Thema Name',
+            'thema_name' => Yii::t('app', 'Thema Name'),
         ];
     }
 
