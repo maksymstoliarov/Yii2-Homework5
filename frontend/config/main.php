@@ -12,6 +12,19 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
+        'assetManager' => [
+            'bundles' => [
+                'edgardmessias\assets\nprogress\NProgressAsset' => [
+                    'configuration' => [
+                        'minimum' => 0.08,
+                        'showSpinner' => true,
+                    ],
+                    'page_loading' => true,
+                    'pjax_events' => true,
+                    'jquery_ajax_events' => true,
+                ],
+            ],
+        ],
         'request' => [
             'csrfParam' => '_csrf-frontend',
         ],

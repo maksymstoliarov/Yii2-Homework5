@@ -7,11 +7,11 @@ use yii\helpers\Html;
 use common\widgets\HelloWidget;
 use frontend\assets\GreyAsset;
 use yii\widgets\Menu;
-use frontend\assets\ProgressAsset;
+use edgardmessias\assets\nprogress\NProgressAsset;
 use common\widgets\MultiLang\MultiLang;
 
 $this->registerCssFile('@web/themes/grey/css/input.css');
-ProgressAsset::register($this);
+NProgressAsset::register($this);
 GreyAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -53,9 +53,7 @@ GreyAsset::register($this);
 <div id="main">
     <div id="navigation">
     <?php
-    echo Menu::widget([
-        'options' => ['class' => 'nav'],
-        'items' => [
+    $menuItems = [
             ['label' => Yii::t('app', 'Students'), 'url' => ['/students/index']],
             ['label' => Yii::t('app', 'Homework'), 'url' => ['/homework/index']],
             ['label' => Yii::t('app', 'Department'), 'url' => ['/department/index']],
@@ -63,14 +61,25 @@ GreyAsset::register($this);
             ['label' => Yii::t('app', 'Test'), 'url' => ['/test/index']],
             ['label' => Yii::t('app', 'Home'), 'url' => ['/site/index']],
             ['label' => Yii::t('app', 'About'), 'url' => ['/site/about']],
-            ['label' => Yii::t('app', 'Contact'), 'url' => ['/site/contact']],
-            Yii::$app->user->isGuest ?
-                ['label' => Yii::t('app', 'Login'), 'url' => ['/site/login']] :
-                ['label' => Yii::t('app', 'Logout').'('.Yii::$app->user->identity->username.')', 'url' => ['/site/logout']],
-                ['label' => Yii::t('app', 'Signup'), 'url' => ['/site/signup']],
-        ],
-    ]);
+            ['label' => Yii::t('app', 'Contact'), 'url' => ['/site/contact']]
+            ];
 
+            if(Yii::$app->user->isGuest)
+            {
+                $menuItems[] =
+                ['label' => Yii::t('app', 'Login'), 'url' => ['/site/login']];
+                $menuItems[] =
+                ['label' => Yii::t('app', 'Signup'), 'url' => ['/site/signup']];
+            }
+            else {
+                $menuItems[] =
+                ['label' => Yii::t('app', 'Logout').'('.Yii::$app->user->identity->username.')', 'url' => ['/site/logout']];
+            }
+
+            echo Menu::widget([
+                'options' => ['class' => 'nav'],
+                'items' => $menuItems,
+                ]);
     ?>
     <div class="clear"></div>
 </div>
